@@ -1,0 +1,338 @@
+:root {
+  color-scheme: light dark;
+  --page: #f2f5f0;
+  --surface: #ffffff;
+  --surface-soft: #e6f2eb;
+  --text: #17211b;
+  --muted: #68736c;
+  --line: #dce3dd;
+  --accent: #176c46;
+  --accent-hover: #0e5636;
+  --danger: #a33b32;
+  color: var(--text);
+  background: var(--page);
+  font:
+    13px -apple-system,
+    BlinkMacSystemFont,
+    'SF Pro Text',
+    sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 360px;
+  height: 460px;
+  margin: 0;
+  overflow: hidden;
+  color: var(--text);
+  background: var(--surface);
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  color: inherit;
+  cursor: pointer;
+}
+.topbar {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  min-height: 54px;
+  padding: 8px 10px 8px 12px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+.brand-logo {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 9px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--muted);
+  background: var(--page);
+}
+.search-wrap:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 14%, transparent);
+}
+.search-wrap span {
+  font-size: 20px;
+  line-height: 1;
+}
+.search-wrap input {
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: var(--text);
+  background: transparent;
+}
+.search-wrap input::placeholder {
+  color: var(--muted);
+}
+.header-actions {
+  display: flex;
+  gap: 4px;
+}
+.icon-button {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  color: var(--muted);
+  background: transparent;
+  font-size: 17px;
+}
+.icon-button:hover {
+  color: var(--accent);
+  background: var(--surface-soft);
+}
+.primary-icon {
+  color: #fff;
+  background: var(--accent);
+  font-size: 21px;
+}
+.primary-icon:hover {
+  color: #fff;
+  background: var(--accent-hover);
+}
+.create-form {
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  background: var(--page);
+}
+.create-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 650;
+}
+.create-form input {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 9px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  outline: none;
+  color: var(--text);
+  background: var(--surface);
+}
+.create-form input:focus {
+  border-color: var(--accent);
+}
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+.form-actions button {
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface);
+}
+.form-actions .primary {
+  border-color: var(--accent);
+  color: #fff;
+  background: var(--accent);
+  font-weight: 700;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  background: var(--page);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+}
+main {
+  height: calc(100% - 54px - 36px);
+  overflow-y: auto;
+}
+.create-form:not([hidden]) ~ main {
+  height: calc(100% - 54px - 36px - 136px);
+}
+.alias {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) 48px;
+  align-items: center;
+  min-height: 61px;
+  padding: 8px 9px 8px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.alias:hover {
+  background: var(--page);
+}
+.alias time {
+  color: var(--muted);
+  font-size: 11px;
+  text-align: left;
+}
+.details {
+  min-width: 0;
+  padding: 3px 5px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+}
+.details strong,
+.details small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.details strong {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+.details small {
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 12px;
+}
+.edit-button {
+  width: 46px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  color: var(--muted);
+  background: var(--surface);
+  font-size: 11px;
+  font-weight: 700;
+}
+.edit-button:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--surface-soft);
+}
+.state {
+  margin: 0;
+  padding: 36px 16px;
+  color: var(--muted);
+  text-align: center;
+}
+.error-text {
+  color: var(--danger);
+}
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 14px;
+  z-index: 2;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  color: var(--text);
+  background: var(--surface);
+  box-shadow: 0 5px 18px #00000026;
+  white-space: nowrap;
+}
+.toast.error {
+  color: var(--danger);
+}
+dialog {
+  width: 320px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--text);
+  background: var(--surface);
+  box-shadow: 0 18px 50px #00000040;
+}
+dialog::backdrop {
+  background: #00000066;
+}
+#edit-form {
+  padding: 14px;
+}
+.dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.dialog-close {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 7px;
+  color: var(--muted);
+  background: transparent;
+  font-size: 20px;
+}
+.dialog-close:hover {
+  background: var(--page);
+}
+.edit-address {
+  margin: 0 0 12px;
+  overflow: hidden;
+  color: var(--accent);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#edit-form label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 650;
+}
+#edit-form input {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 9px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  outline: none;
+  color: var(--text);
+  background: var(--page);
+}
+#edit-form input:focus {
+  border-color: var(--accent);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #111713;
+    --surface: #1a231d;
+    --surface-soft: #20382b;
+    --text: #e8eee9;
+    --muted: #a3aea6;
+    --line: #334138;
+    --accent: #68c997;
+    --accent-hover: #8bdbae;
+    --danger: #f08b80;
+  }
+  .primary-icon,
+  .form-actions .primary {
+    color: #0d2116;
+  }
+}

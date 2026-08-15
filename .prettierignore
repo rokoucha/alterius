@@ -4,3 +4,9 @@ dist/
 *.tsbuildinfo
 pnpm-lock.yaml
 .dev.vars
+Shared (App)/
+Shared (Extension)/
+iOS (App)/
+iOS (Extension)/
+macOS (App)/
+macOS (Extension)/

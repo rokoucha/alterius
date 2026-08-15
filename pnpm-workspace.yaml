@@ -2,6 +2,7 @@ packages:
   - 'web'
   - 'worker'
   - 'shared'
+  - 'extension'
 
 allowBuilds:
   esbuild: true

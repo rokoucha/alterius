@@ -1,0 +1,1011 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B9C85883030A375006F240F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9C85873030A375006F240F /* AppDelegate.swift */; };
+		7B9C858A3030A375006F240F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9C85893030A375006F240F /* SceneDelegate.swift */; };
+		7B9C858D3030A375006F240F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C858B3030A375006F240F /* LaunchScreen.storyboard */; };
+		7B9C85903030A375006F240F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C858E3030A375006F240F /* Main.storyboard */; };
+		7B9C85993030A375006F240F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9C85983030A375006F240F /* AppDelegate.swift */; };
+		7B9C859C3030A375006F240F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C859A3030A375006F240F /* Main.storyboard */; };
+		7B9C85A33030A375006F240F /* Alterius Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7B9C85A23030A375006F240F /* Alterius Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7B9C85AD3030A375006F240F /* Alterius Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7B9C85AC3030A375006F240F /* Alterius Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7B9C85B23030A375006F240F /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85773030A374006F240F /* Main.html */; };
+		7B9C85B33030A375006F240F /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85773030A374006F240F /* Main.html */; };
+		7B9C85B43030A375006F240F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85793030A374006F240F /* Icon.png */; };
+		7B9C85B53030A375006F240F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85793030A374006F240F /* Icon.png */; };
+		7B9C85B63030A375006F240F /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C857A3030A374006F240F /* Style.css */; };
+		7B9C85B73030A375006F240F /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C857A3030A374006F240F /* Style.css */; };
+		7B9C85B83030A375006F240F /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C857B3030A374006F240F /* Script.js */; };
+		7B9C85B93030A375006F240F /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C857B3030A374006F240F /* Script.js */; };
+		7B9C85BA3030A375006F240F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9C857C3030A374006F240F /* ViewController.swift */; };
+		7B9C85BB3030A375006F240F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9C857C3030A374006F240F /* ViewController.swift */; };
+		7B9C85BC3030A375006F240F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C857D3030A374006F240F /* Assets.xcassets */; };
+		7B9C85BD3030A375006F240F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C857D3030A374006F240F /* Assets.xcassets */; };
+		7B9C85BE3030A375006F240F /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9C857F3030A375006F240F /* SafariWebExtensionHandler.swift */; };
+		7B9C85BF3030A375006F240F /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9C857F3030A375006F240F /* SafariWebExtensionHandler.swift */; };
+		7B9C85DB3030A375006F240F /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D13030A375006F240F /* popup.js */; };
+		7B9C85DC3030A375006F240F /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D23030A375006F240F /* popup.html */; };
+		7B9C85DD3030A375006F240F /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D33030A375006F240F /* options.js */; };
+		7B9C85DE3030A375006F240F /* lib.js in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D43030A375006F240F /* lib.js */; };
+		7B9C85E03030A375006F240F /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D63030A375006F240F /* icons */; };
+		7B9C85E13030A375006F240F /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D73030A375006F240F /* manifest.json */; };
+		7B9C85E23030A375006F240F /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D83030A375006F240F /* options.html */; };
+		7B9C85E33030A375006F240F /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D93030A375006F240F /* popup.css */; };
+		7B9C85E43030A375006F240F /* options.css in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85DA3030A375006F240F /* options.css */; };
+		7B9C85E53030A375006F240F /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D13030A375006F240F /* popup.js */; };
+		7B9C85E63030A375006F240F /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D23030A375006F240F /* popup.html */; };
+		7B9C85E73030A375006F240F /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D33030A375006F240F /* options.js */; };
+		7B9C85E83030A375006F240F /* lib.js in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D43030A375006F240F /* lib.js */; };
+		7B9C85EA3030A375006F240F /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D63030A375006F240F /* icons */; };
+		7B9C85EB3030A375006F240F /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D73030A375006F240F /* manifest.json */; };
+		7B9C85EC3030A375006F240F /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D83030A375006F240F /* options.html */; };
+		7B9C85ED3030A375006F240F /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85D93030A375006F240F /* popup.css */; };
+		7B9C85EE3030A375006F240F /* options.css in Resources */ = {isa = PBXBuildFile; fileRef = 7B9C85DA3030A375006F240F /* options.css */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B9C85A43030A375006F240F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9C85713030A374006F240F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B9C85A13030A375006F240F;
+			remoteInfo = "Alterius Extension (iOS)";
+		};
+		7B9C85AE3030A375006F240F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B9C85713030A374006F240F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B9C85AB3030A375006F240F;
+			remoteInfo = "Alterius Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7B9C85C53030A375006F240F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7B9C85A33030A375006F240F /* Alterius Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B9C85CC3030A375006F240F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7B9C85AD3030A375006F240F /* Alterius Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7B9C85783030A374006F240F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		7B9C85793030A374006F240F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		7B9C857A3030A374006F240F /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		7B9C857B3030A374006F240F /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		7B9C857C3030A374006F240F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7B9C857D3030A374006F240F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7B9C857F3030A375006F240F /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		7B9C85843030A375006F240F /* Alterius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alterius.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B9C85873030A375006F240F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7B9C85893030A375006F240F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7B9C858C3030A375006F240F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7B9C858F3030A375006F240F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7B9C85913030A375006F240F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B9C85963030A375006F240F /* Alterius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alterius.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B9C85983030A375006F240F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7B9C859B3030A375006F240F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7B9C859D3030A375006F240F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B9C85A23030A375006F240F /* Alterius Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Alterius Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B9C85A73030A375006F240F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B9C85AC3030A375006F240F /* Alterius Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Alterius Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B9C85B13030A375006F240F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B9C85D13030A375006F240F /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = popup.js; path = extension/dist/popup.js; sourceTree = SOURCE_ROOT; };
+		7B9C85D23030A375006F240F /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = extension/popup.html; sourceTree = SOURCE_ROOT; };
+		7B9C85D33030A375006F240F /* options.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = options.js; path = extension/dist/options.js; sourceTree = SOURCE_ROOT; };
+		7B9C85D43030A375006F240F /* lib.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = lib.js; path = extension/dist/lib.js; sourceTree = SOURCE_ROOT; };
+		7B9C85D63030A375006F240F /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = extension/icons; sourceTree = SOURCE_ROOT; };
+		7B9C85D73030A375006F240F /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = extension/manifest.json; sourceTree = SOURCE_ROOT; };
+		7B9C85D83030A375006F240F /* options.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = options.html; path = extension/options.html; sourceTree = SOURCE_ROOT; };
+		7B9C85D93030A375006F240F /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = popup.css; path = extension/popup.css; sourceTree = SOURCE_ROOT; };
+		7B9C85DA3030A375006F240F /* options.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = options.css; path = extension/options.css; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B9C85813030A375006F240F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B9C85933030A375006F240F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B9C859F3030A375006F240F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B9C85A93030A375006F240F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B9C85703030A374006F240F = {
+			isa = PBXGroup;
+			children = (
+				7B9C85753030A374006F240F /* Shared (App) */,
+				7B9C857E3030A375006F240F /* Shared (Extension) */,
+				7B9C85863030A375006F240F /* iOS (App) */,
+				7B9C85973030A375006F240F /* macOS (App) */,
+				7B9C85A63030A375006F240F /* iOS (Extension) */,
+				7B9C85B03030A375006F240F /* macOS (Extension) */,
+				7B9C85853030A375006F240F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B9C85753030A374006F240F /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				7B9C857C3030A374006F240F /* ViewController.swift */,
+				7B9C857D3030A374006F240F /* Assets.xcassets */,
+				7B9C85763030A374006F240F /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		7B9C85763030A374006F240F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B9C85773030A374006F240F /* Main.html */,
+				7B9C85793030A374006F240F /* Icon.png */,
+				7B9C857A3030A374006F240F /* Style.css */,
+				7B9C857B3030A374006F240F /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7B9C857E3030A375006F240F /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				7B9C85D03030A375006F240F /* Resources */,
+				7B9C857F3030A375006F240F /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		7B9C85853030A375006F240F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B9C85843030A375006F240F /* Alterius.app */,
+				7B9C85963030A375006F240F /* Alterius.app */,
+				7B9C85A23030A375006F240F /* Alterius Extension.appex */,
+				7B9C85AC3030A375006F240F /* Alterius Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B9C85863030A375006F240F /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				7B9C85873030A375006F240F /* AppDelegate.swift */,
+				7B9C85893030A375006F240F /* SceneDelegate.swift */,
+				7B9C858B3030A375006F240F /* LaunchScreen.storyboard */,
+				7B9C858E3030A375006F240F /* Main.storyboard */,
+				7B9C85913030A375006F240F /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		7B9C85973030A375006F240F /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				7B9C85983030A375006F240F /* AppDelegate.swift */,
+				7B9C859A3030A375006F240F /* Main.storyboard */,
+				7B9C859D3030A375006F240F /* Info.plist */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		7B9C85A63030A375006F240F /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				7B9C85A73030A375006F240F /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		7B9C85B03030A375006F240F /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				7B9C85B13030A375006F240F /* Info.plist */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		7B9C85D03030A375006F240F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B9C85D13030A375006F240F /* popup.js */,
+				7B9C85D23030A375006F240F /* popup.html */,
+				7B9C85D33030A375006F240F /* options.js */,
+				7B9C85D43030A375006F240F /* lib.js */,
+				7B9C85D63030A375006F240F /* icons */,
+				7B9C85D73030A375006F240F /* manifest.json */,
+				7B9C85D83030A375006F240F /* options.html */,
+				7B9C85D93030A375006F240F /* popup.css */,
+				7B9C85DA3030A375006F240F /* options.css */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B9C85833030A375006F240F /* Alterius (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B9C85C63030A375006F240F /* Build configuration list for PBXNativeTarget "Alterius (iOS)" */;
+			buildPhases = (
+				7B9C85803030A375006F240F /* Sources */,
+				7B9C85813030A375006F240F /* Frameworks */,
+				7B9C85823030A375006F240F /* Resources */,
+				7B9C85C53030A375006F240F /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B9C85A53030A375006F240F /* PBXTargetDependency */,
+			);
+			name = "Alterius (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "Alterius (iOS)";
+			productReference = 7B9C85843030A375006F240F /* Alterius.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7B9C85953030A375006F240F /* Alterius (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B9C85CD3030A375006F240F /* Build configuration list for PBXNativeTarget "Alterius (macOS)" */;
+			buildPhases = (
+				7B9C85923030A375006F240F /* Sources */,
+				7B9C85933030A375006F240F /* Frameworks */,
+				7B9C85943030A375006F240F /* Resources */,
+				7B9C85CC3030A375006F240F /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B9C85AF3030A375006F240F /* PBXTargetDependency */,
+			);
+			name = "Alterius (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "Alterius (macOS)";
+			productReference = 7B9C85963030A375006F240F /* Alterius.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7B9C85A13030A375006F240F /* Alterius Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B9C85C23030A375006F240F /* Build configuration list for PBXNativeTarget "Alterius Extension (iOS)" */;
+			buildPhases = (
+				7B9C859E3030A375006F240F /* Sources */,
+				7B9C859F3030A375006F240F /* Frameworks */,
+				7B9C85A03030A375006F240F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alterius Extension (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "Alterius Extension (iOS)";
+			productReference = 7B9C85A23030A375006F240F /* Alterius Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		7B9C85AB3030A375006F240F /* Alterius Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B9C85C93030A375006F240F /* Build configuration list for PBXNativeTarget "Alterius Extension (macOS)" */;
+			buildPhases = (
+				7B9C85A83030A375006F240F /* Sources */,
+				7B9C85A93030A375006F240F /* Frameworks */,
+				7B9C85AA3030A375006F240F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alterius Extension (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "Alterius Extension (macOS)";
+			productReference = 7B9C85AC3030A375006F240F /* Alterius Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B9C85713030A374006F240F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					7B9C85833030A375006F240F = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					7B9C85953030A375006F240F = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					7B9C85A13030A375006F240F = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					7B9C85AB3030A375006F240F = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = 7B9C85743030A374006F240F /* Build configuration list for PBXProject "Alterius" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7B9C85703030A374006F240F;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7B9C85853030A375006F240F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B9C85833030A375006F240F /* Alterius (iOS) */,
+				7B9C85953030A375006F240F /* Alterius (macOS) */,
+				7B9C85A13030A375006F240F /* Alterius Extension (iOS) */,
+				7B9C85AB3030A375006F240F /* Alterius Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B9C85823030A375006F240F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B9C85B43030A375006F240F /* Icon.png in Resources */,
+				7B9C858D3030A375006F240F /* LaunchScreen.storyboard in Resources */,
+				7B9C85B23030A375006F240F /* Main.html in Resources */,
+				7B9C85B83030A375006F240F /* Script.js in Resources */,
+				7B9C85BC3030A375006F240F /* Assets.xcassets in Resources */,
+				7B9C85903030A375006F240F /* Main.storyboard in Resources */,
+				7B9C85B63030A375006F240F /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B9C85943030A375006F240F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B9C85B53030A375006F240F /* Icon.png in Resources */,
+				7B9C85B73030A375006F240F /* Style.css in Resources */,
+				7B9C859C3030A375006F240F /* Main.storyboard in Resources */,
+				7B9C85B93030A375006F240F /* Script.js in Resources */,
+				7B9C85BD3030A375006F240F /* Assets.xcassets in Resources */,
+				7B9C85B33030A375006F240F /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B9C85A03030A375006F240F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B9C85E83030A375006F240F /* lib.js in Resources */,
+				7B9C85EB3030A375006F240F /* manifest.json in Resources */,
+				7B9C85EE3030A375006F240F /* options.css in Resources */,
+				7B9C85E53030A375006F240F /* popup.js in Resources */,
+				7B9C85EC3030A375006F240F /* options.html in Resources */,
+				7B9C85ED3030A375006F240F /* popup.css in Resources */,
+				7B9C85EA3030A375006F240F /* icons in Resources */,
+				7B9C85E73030A375006F240F /* options.js in Resources */,
+				7B9C85E63030A375006F240F /* popup.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B9C85AA3030A375006F240F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B9C85DE3030A375006F240F /* lib.js in Resources */,
+				7B9C85E13030A375006F240F /* manifest.json in Resources */,
+				7B9C85E43030A375006F240F /* options.css in Resources */,
+				7B9C85DB3030A375006F240F /* popup.js in Resources */,
+				7B9C85E23030A375006F240F /* options.html in Resources */,
+				7B9C85E33030A375006F240F /* popup.css in Resources */,
+				7B9C85E03030A375006F240F /* icons in Resources */,
+				7B9C85DD3030A375006F240F /* options.js in Resources */,
+				7B9C85DC3030A375006F240F /* popup.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B9C85803030A375006F240F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B9C85BA3030A375006F240F /* ViewController.swift in Sources */,
+				7B9C85883030A375006F240F /* AppDelegate.swift in Sources */,
+				7B9C858A3030A375006F240F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B9C85923030A375006F240F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B9C85BB3030A375006F240F /* ViewController.swift in Sources */,
+				7B9C85993030A375006F240F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B9C859E3030A375006F240F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B9C85BE3030A375006F240F /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B9C85A83030A375006F240F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B9C85BF3030A375006F240F /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B9C85A53030A375006F240F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B9C85A13030A375006F240F /* Alterius Extension (iOS) */;
+			targetProxy = 7B9C85A43030A375006F240F /* PBXContainerItemProxy */;
+		};
+		7B9C85AF3030A375006F240F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B9C85AB3030A375006F240F /* Alterius Extension (macOS) */;
+			targetProxy = 7B9C85AE3030A375006F240F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7B9C85773030A374006F240F /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B9C85783030A374006F240F /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		7B9C858B3030A375006F240F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B9C858C3030A375006F240F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7B9C858E3030A375006F240F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B9C858F3030A375006F240F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7B9C859A3030A375006F240F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B9C859B3030A375006F240F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7B9C85C03030A375006F240F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7B9C85C13030A375006F240F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		7B9C85C33030A375006F240F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Alterius Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.rokoucha.alterius.Extension;
+				PRODUCT_NAME = "Alterius Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7B9C85C43030A375006F240F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Alterius Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.rokoucha.alterius.Extension;
+				PRODUCT_NAME = "Alterius Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B9C85C73030A375006F240F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Alterius;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.rokoucha.alterius;
+				PRODUCT_NAME = Alterius;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7B9C85C83030A375006F240F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Alterius;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.rokoucha.alterius;
+				PRODUCT_NAME = Alterius;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B9C85CA3030A375006F240F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Alterius Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.rokoucha.alterius.Extension;
+				PRODUCT_NAME = "Alterius Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7B9C85CB3030A375006F240F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Alterius Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.rokoucha.alterius.Extension;
+				PRODUCT_NAME = "Alterius Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7B9C85CE3030A375006F240F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Alterius;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.rokoucha.alterius;
+				PRODUCT_NAME = Alterius;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7B9C85CF3030A375006F240F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Alterius;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.rokoucha.alterius;
+				PRODUCT_NAME = Alterius;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B9C85743030A374006F240F /* Build configuration list for PBXProject "Alterius" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B9C85C03030A375006F240F /* Debug */,
+				7B9C85C13030A375006F240F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B9C85C23030A375006F240F /* Build configuration list for PBXNativeTarget "Alterius Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B9C85C33030A375006F240F /* Debug */,
+				7B9C85C43030A375006F240F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B9C85C63030A375006F240F /* Build configuration list for PBXNativeTarget "Alterius (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B9C85C73030A375006F240F /* Debug */,
+				7B9C85C83030A375006F240F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B9C85C93030A375006F240F /* Build configuration list for PBXNativeTarget "Alterius Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B9C85CA3030A375006F240F /* Debug */,
+				7B9C85CB3030A375006F240F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B9C85CD3030A375006F240F /* Build configuration list for PBXNativeTarget "Alterius (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B9C85CE3030A375006F240F /* Debug */,
+				7B9C85CF3030A375006F240F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B9C85713030A374006F240F /* Project object */;
+}

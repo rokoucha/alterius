@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>設定</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>拡張機能の設定</h1>
+      <p>URLを入力してください</p>
+      <form id="settings-form">
+        <label
+          >API URL<input
+            id="api-url"
+            type="url"
+            placeholder="https://alterius.example.workers.dev"
+        /></label>
+        <button type="submit">保存</button>
+      </form>
+      <section class="access">
+        <h2>ログインが必要な場合</h2>
+        <p>
+          APIがログインで保護されている場合は、Safariのタブで認証してから接続を確認します。
+        </p>
+        <div class="access-actions">
+          <button id="access-login" class="secondary" type="button">
+            ログインページを開く
+          </button>
+          <button id="check-connection" type="button">接続を確認</button>
+        </div>
+      </section>
+      <p id="message" role="status"></p>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

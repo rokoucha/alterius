@@ -5,7 +5,7 @@
   "type": "module",
   "packageManager": "pnpm@11.20.0",
   "scripts": {
-    "build": "pnpm --filter @alterius/web build",
+    "build": "pnpm --filter @alterius/web build && pnpm --filter @alterius/extension build",
     "dev": "pnpm build && wrangler dev --local",
     "dev:web": "pnpm --filter @alterius/web dev",
     "deploy": "pnpm build && wrangler deploy",

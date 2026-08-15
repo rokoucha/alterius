@@ -1,0 +1,27 @@
+{
+  "name": "alterius",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.20.0",
+  "scripts": {
+    "build": "pnpm --filter @alterius/web build",
+    "dev": "pnpm build && wrangler dev --local",
+    "dev:web": "pnpm --filter @alterius/web dev",
+    "deploy": "pnpm build && wrangler deploy",
+    "db:migrate:local": "wrangler d1 migrations apply alterius --local",
+    "db:migrate:remote": "wrangler d1 migrations apply alterius --remote",
+    "lint": "prettier --check .",
+    "fix": "prettier --write .",
+    "test": "pnpm -r --if-present test",
+    "test:watch": "pnpm -r --parallel --if-present test:watch",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "check": "pnpm lint && pnpm typecheck && pnpm build && pnpm test"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260815.1",
+    "prettier": "^3.9.6",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.123.0"
+  }
+}

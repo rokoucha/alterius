@@ -16,6 +16,7 @@ const toast = mustQuery<HTMLParagraphElement>('#toast')
 const editDialog = mustQuery<HTMLDialogElement>('#edit-dialog')
 const editForm = mustQuery<HTMLFormElement>('#edit-form')
 const editAddress = mustQuery<HTMLParagraphElement>('#edit-address')
+const deleteAliasButton = mustQuery<HTMLButtonElement>('#delete-alias')
 let requestNumber = 0
 let searchTimer: number | undefined
 let toastTimer: number | undefined
@@ -196,6 +197,29 @@ mustQuery<HTMLButtonElement>('#cancel-edit').addEventListener(
 editDialog.addEventListener('cancel', (event) => {
   event.preventDefault()
   closeEditor()
+})
+deleteAliasButton.addEventListener('click', async () => {
+  if (!editingAlias) return
+  const alias = editingAlias
+  const confirmed = window.confirm(
+    `${addressOf(alias)} を削除しますか？\nこの操作は取り消せません。`,
+  )
+  if (!confirmed) return
+
+  const saveButton = mustQuery<HTMLButtonElement>('#edit-form [type="submit"]')
+  deleteAliasButton.disabled = true
+  saveButton.disabled = true
+  try {
+    await api(`/api/aliases/${alias.id}`, { method: 'DELETE' })
+    closeEditor()
+    showToast('削除しました')
+    await loadAliases()
+  } catch (error) {
+    showToast(errorMessage(error), true)
+  } finally {
+    deleteAliasButton.disabled = false
+    saveButton.disabled = false
+  }
 })
 editForm.addEventListener('submit', async (event) => {
   event.preventDefault()

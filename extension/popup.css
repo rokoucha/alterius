@@ -139,6 +139,7 @@ button {
 }
 .form-actions {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   gap: 6px;
 }
@@ -153,6 +154,20 @@ button {
   color: #fff;
   background: var(--accent);
   font-weight: 700;
+}
+.form-actions .danger {
+  margin-right: auto;
+  border-color: color-mix(in srgb, var(--danger) 40%, var(--line));
+  color: var(--danger);
+  background: var(--surface);
+}
+.form-actions .danger:hover {
+  border-color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 8%, var(--surface));
+}
+.dialog-primary-actions {
+  display: flex;
+  gap: 6px;
 }
 .toolbar {
   display: flex;

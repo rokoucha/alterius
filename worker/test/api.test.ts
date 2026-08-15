@@ -81,6 +81,36 @@ describe('aliases API', () => {
     })
   })
 
+  it('permanently deletes an alias', async () => {
+    const created = await exports.default.fetch(
+      'https://example.test/api/aliases',
+      {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ serviceName: 'Delete me' }),
+      },
+    )
+    const { alias } = await json<{ alias: Alias }>(created)
+
+    const deleted = await exports.default.fetch(
+      `https://example.test/api/aliases/${alias.id}`,
+      { method: 'DELETE' },
+    )
+    expect(deleted.status).toBe(200)
+    expect(await json(deleted)).toEqual({ deleted: true })
+
+    const missing = await exports.default.fetch(
+      `https://example.test/api/aliases/${alias.id}`,
+      { method: 'DELETE' },
+    )
+    expect(missing.status).toBe(404)
+
+    const aliases = await exports.default.fetch(
+      'https://example.test/api/aliases?includeInactive=true',
+    )
+    expect((await json<{ aliases: Alias[] }>(aliases)).aliases).toHaveLength(0)
+  })
+
   it('imports valid rows and reports invalid and duplicate rows', async () => {
     const payload = {
       aliases: [

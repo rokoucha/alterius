@@ -26,10 +26,10 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
 }
 
 export const aliasesApi = {
-  list(query: string, includeInactive: boolean) {
+  list(query: string) {
     const params = new URLSearchParams({
       q: query,
-      includeInactive: String(includeInactive),
+      includeInactive: 'false',
     })
     return request<{ aliases: Alias[] }>(`/api/aliases?${params}`)
   },
@@ -43,6 +43,11 @@ export const aliasesApi = {
     return request<{ alias: Alias }>(`/api/aliases/${id}`, {
       method: 'PATCH',
       body: JSON.stringify(input),
+    })
+  },
+  delete(id: string) {
+    return request<{ deleted: true }>(`/api/aliases/${id}`, {
+      method: 'DELETE',
     })
   },
   import(input: ImportAliasInput[]) {

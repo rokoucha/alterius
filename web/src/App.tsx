@@ -5,6 +5,16 @@ import { aliasesApi } from './api'
 import { prepareAddyImport } from './csv'
 
 const ALIAS_DOMAIN = '8c7042.org'
+const logoUrl = new URL('../../extension/icons/icon-128.png', import.meta.url)
+  .href
+
+function initialTheme(): 'light' | 'dark' {
+  const stored = localStorage.getItem('theme')
+  if (stored === 'light' || stored === 'dark') return stored
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light'
+}
 
 function errorMessage(cause: unknown): string {
   return cause instanceof Error
@@ -21,10 +31,10 @@ async function copyAlias(alias: Alias): Promise<string> {
 interface AliasCardProps {
   alias: Alias
   onEdit: (alias: Alias) => void
-  onToggle: (alias: Alias) => Promise<void>
+  onDelete: (alias: Alias) => Promise<void>
 }
 
-function AliasCard({ alias, onEdit, onToggle }: AliasCardProps) {
+function AliasCard({ alias, onEdit, onDelete }: AliasCardProps) {
   const [copied, setCopied] = useState(false)
   const copy = async () => {
     try {
@@ -37,9 +47,7 @@ function AliasCard({ alias, onEdit, onToggle }: AliasCardProps) {
   }
 
   return (
-    <article
-      className={`alias-card ${alias.status === 'inactive' ? 'is-inactive' : ''}`}
-    >
+    <article className="alias-card">
       <div className="avatar" aria-hidden="true">
         {alias.service_name.slice(0, 1).toUpperCase()}
       </div>
@@ -62,9 +70,9 @@ function AliasCard({ alias, onEdit, onToggle }: AliasCardProps) {
         <button
           className="danger"
           type="button"
-          onClick={() => void onToggle(alias)}
+          onClick={() => void onDelete(alias)}
         >
-          {alias.status === 'active' ? '無効化' : '有効化'}
+          削除
         </button>
       </div>
     </article>
@@ -275,24 +283,21 @@ function CsvImporter({ onImported }: { onImported: () => Promise<void> }) {
 export function App() {
   const [aliases, setAliases] = useState<Alias[]>([])
   const [query, setQuery] = useState('')
-  const [includeInactive, setIncludeInactive] = useState(false)
   const [loadingMessage, setLoadingMessage] = useState('読み込み中…')
   const [createMessage, setCreateMessage] = useState('')
   const [creating, setCreating] = useState(false)
   const [editing, setEditing] = useState<Alias | null>(null)
-  const [theme, setTheme] = useState(
-    () => localStorage.getItem('theme') || 'light',
-  )
+  const [theme, setTheme] = useState<'light' | 'dark'>(initialTheme)
 
   const load = useCallback(async () => {
     try {
-      const result = await aliasesApi.list(query, includeInactive)
+      const result = await aliasesApi.list(query)
       setAliases(result.aliases)
       setLoadingMessage(`${result.aliases.length}件`)
     } catch (cause) {
       setLoadingMessage(errorMessage(cause))
     }
-  }, [query, includeInactive])
+  }, [query])
 
   useEffect(() => {
     const timer = window.setTimeout(() => void load(), 200)
@@ -327,11 +332,17 @@ export function App() {
     }
   }
 
-  const toggle = async (alias: Alias) => {
-    await aliasesApi.update(alias.id, {
-      status: alias.status === 'active' ? 'inactive' : 'active',
-    })
-    await load()
+  const deleteAlias = async (alias: Alias) => {
+    const confirmed = window.confirm(
+      `${aliasAddress(alias)} を削除しますか？\nこの操作は取り消せません。`,
+    )
+    if (!confirmed) return
+    try {
+      await aliasesApi.delete(alias.id)
+      await load()
+    } catch (cause) {
+      window.alert(errorMessage(cause))
+    }
   }
 
   const save = async (id: string, serviceName: string, note: string) => {
@@ -340,101 +351,108 @@ export function App() {
   }
 
   return (
-    <main className="shell">
-      <header>
-        <div>
-          <p className="eyebrow">EMAIL ALIAS MANAGER</p>
-          <h1>Alterius</h1>
+    <>
+      <header className="topbar">
+        <a className="brand" href="#top" aria-label="Alterius ホーム">
+          <img src={logoUrl} alt="" width="40" height="40" />
+          <span>
+            <p className="eyebrow">EMAIL ALIAS MANAGER</p>
+            <strong>Alterius</strong>
+          </span>
+        </a>
+        <label className="header-search">
+          <span aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="サービス・アドレスを検索"
+            aria-label="エイリアスを検索"
+          />
+        </label>
+        <div className="header-actions">
+          <button
+            className="icon-button"
+            type="button"
+            aria-label={`${theme === 'dark' ? 'ライト' : 'ダーク'}モードに切り替える`}
+            title={`${theme === 'dark' ? 'ライト' : 'ダーク'}モード`}
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          >
+            {theme === 'dark' ? '☀' : '☾'}
+          </button>
+          <a className="create-shortcut" href="#create-title">
+            <span aria-hidden="true">＋</span>
+            新規作成
+          </a>
         </div>
-        <button
-          className="icon-button"
-          type="button"
-          aria-label="テーマを切り替える"
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        >
-          ◐
-        </button>
       </header>
 
-      <section className="creator" aria-labelledby="create-title">
-        <div>
-          <h2 id="create-title">新しいエイリアス</h2>
-          <p>サービス名を入力すると、ランダムな8文字のアドレスを発行します。</p>
-        </div>
-        <form onSubmit={(event) => void create(event)}>
-          <label>
-            サービス名
-            <input
-              name="serviceName"
-              required
-              maxLength={120}
-              autoComplete="off"
-              placeholder="例: GitHub"
-            />
-          </label>
-          <label>
-            メモ <span>任意</span>
-            <input
-              name="note"
-              maxLength={1000}
-              autoComplete="off"
-              placeholder="用途や登録日など"
-            />
-          </label>
-          <button className="primary" disabled={creating}>
-            {creating ? '生成中…' : '生成してコピー'}
-          </button>
-        </form>
-        <p className="message" role="status" aria-live="polite">
-          {createMessage}
-        </p>
-      </section>
-
-      <section className="records" aria-labelledby="records-title">
-        <div className="records-head">
+      <main className="shell" id="top">
+        <section className="creator" aria-labelledby="create-title">
           <div>
-            <h2 id="records-title">エイリアス</h2>
-            <p>{loadingMessage}</p>
+            <h2 id="create-title">新しいエイリアス</h2>
+            <p>
+              サービス名を入力すると、ランダムな8文字のアドレスを発行します。
+            </p>
           </div>
-          <div className="filters">
-            <input
-              type="search"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="サービス・アドレスを検索"
-              aria-label="検索"
-            />
-            <label className="check">
+          <form onSubmit={(event) => void create(event)}>
+            <label>
+              サービス名
               <input
-                type="checkbox"
-                checked={includeInactive}
-                onChange={(event) => setIncludeInactive(event.target.checked)}
-              />{' '}
-              無効を表示
+                name="serviceName"
+                required
+                maxLength={120}
+                autoComplete="off"
+                placeholder="例: GitHub"
+              />
             </label>
-          </div>
-        </div>
-        {!aliases.length && (
-          <div className="empty">エイリアスはまだありません。</div>
-        )}
-        <div className="alias-list">
-          {aliases.map((alias) => (
-            <AliasCard
-              key={alias.id}
-              alias={alias}
-              onEdit={setEditing}
-              onToggle={toggle}
-            />
-          ))}
-        </div>
-      </section>
+            <label>
+              メモ <span>任意</span>
+              <input
+                name="note"
+                maxLength={1000}
+                autoComplete="off"
+                placeholder="用途や登録日など"
+              />
+            </label>
+            <button className="primary" disabled={creating}>
+              {creating ? '生成中…' : '生成してコピー'}
+            </button>
+          </form>
+          <p className="message" role="status" aria-live="polite">
+            {createMessage}
+          </p>
+        </section>
 
-      <CsvImporter onImported={load} />
-      <EditDialog
-        alias={editing}
-        onClose={() => setEditing(null)}
-        onSave={save}
-      />
-    </main>
+        <section className="records" aria-labelledby="records-title">
+          <div className="records-head">
+            <div>
+              <h2 id="records-title">エイリアス</h2>
+              <p>{loadingMessage}</p>
+            </div>
+          </div>
+          {!aliases.length && (
+            <div className="empty">エイリアスはまだありません。</div>
+          )}
+          <div className="alias-list">
+            {aliases.map((alias) => (
+              <AliasCard
+                key={alias.id}
+                alias={alias}
+                onEdit={setEditing}
+                onDelete={deleteAlias}
+              />
+            ))}
+          </div>
+        </section>
+
+        <CsvImporter onImported={load} />
+        <EditDialog
+          alias={editing}
+          onClose={() => setEditing(null)}
+          onSave={save}
+        />
+      </main>
+    </>
   )
 }

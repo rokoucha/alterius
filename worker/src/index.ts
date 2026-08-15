@@ -294,6 +294,14 @@ async function updateAlias(
   })
 }
 
+async function deleteAlias(env: Env, id: string): Promise<Response> {
+  const result = await env.DB.prepare('DELETE FROM aliases WHERE id = ?1')
+    .bind(id)
+    .run()
+  if (!result.meta.changes) return error('Alias not found', 404)
+  return json({ deleted: true })
+}
+
 async function routeApi(request: Request, env: Env): Promise<Response> {
   const url = new URL(request.url)
   if (url.pathname === '/api/aliases' && request.method === 'GET')
@@ -306,17 +314,7 @@ async function routeApi(request: Request, env: Env): Promise<Response> {
   const match = url.pathname.match(/^\/api\/aliases\/([0-9a-f-]+)$/i)
   if (match && request.method === 'PATCH')
     return updateAlias(request, env, match[1])
-  if (match && request.method === 'DELETE') {
-    return updateAlias(
-      new Request(request, {
-        method: 'PATCH',
-        body: JSON.stringify({ status: 'inactive' }),
-        headers: { 'content-type': 'application/json' },
-      }),
-      env,
-      match[1],
-    )
-  }
+  if (match && request.method === 'DELETE') return deleteAlias(env, match[1])
   return error('Not found', 404)
 }
 

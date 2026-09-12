@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@12.3.4",
+  "packageManager": "pnpm@12.4.1",
   "scripts": {
     "build": "pnpm --filter @alterius/web build && pnpm --filter @alterius/extension build",
     "dev": "pnpm build && wrangler dev --local",
